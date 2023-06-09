@@ -1,0 +1,493 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Charts</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-[100vh]">
+      <!-- First Row  -->
+      <div
+        class="grid lg:grid-rows-1 lg:grid-cols-7 grid-cols-3 grid-rows-2 px-2 py-1 w-full gap-2"
+      >
+        <!-- Box 1  -->
+        <div class="col-span-1 flex flex-col justify-center items-center box">
+          <img
+            src="./img/logo.png"
+            alt="logo"
+            class="lg:w-[4rem] w-[6rem] lg:h-[4rem] h-[6rem] mb-8"
+          />
+          <h1
+            class="text-red-500 font-semibold lg:leading-[1.2rem] lg:text-[1rem] sm:text-[.8rem] text-[1.6rem]"
+          >
+            Other Level's
+          </h1>
+          <h1
+            class="text-center lg:leading-[1.2rem] leading-[2rem] lg:text-[1rem] text-[1.6rem] text-gray-800 font-semibold"
+          >
+            Sale Oerformece Metrics
+          </h1>
+          <h1 class="lg:text-[1rem] text-[1.8rem] sm:text-[.8rem]">2022</h1>
+        </div>
+        <!-- Box 2  -->
+        <div class="col-span-1 box flex flex-col justify-center gap-4 px-4">
+          <div class="flex items-center justify-around gap-1">
+            <img src="./img/euro.png" alt="euro" class="w-[2rem] h-[2rem]" />
+            <h1
+              class="text-start text-[1rem] leading-[1rem] text-gray-800 font-semibold"
+            >
+              Total Earnings
+            </h1>
+            <img
+              src="./img/arrow-up.png"
+              alt="arrow-up"
+              class="w-[1rem] h-[1rem] self-end"
+            />
+          </div>
+          <div class="flex flex-col items-start gap-2">
+            <div>
+              <h1 class="font-semibold text-[1.4rem]">20.000.555</h1>
+              <p class="font-semibold text-[1rem] text-gray-600">
+                Egyptian Pounds
+              </p>
+            </div>
+            <hr class="border-1 border-gray-400 w-full" />
+            <p class="font-semibold text-[1rem] text-gray-600">
+              Total pay calls
+            </p>
+          </div>
+          <div class="flex justify-between items-center">
+            <div>
+              <h1 class="font-semibold text-[1.4rem]">1.198</h1>
+              <p class="font-semibold text-[1rem] text-gray-600">Call</p>
+            </div>
+            <img
+              src=".//img/ecouteurs.png"
+              alt="ecouteursIcon"
+              class="w-[2.8rem] h-[2.8rem]"
+            />
+          </div>
+        </div>
+        <!-- Box 3 -->
+        <div class="col-span-1 box flex flex-col gap-4 justify-center px-4">
+          <div class="flex flex justify-between items-start mb-4">
+            <div>
+              <p class="font-semibold text-[.8rem] text-gray-600">Calls</p>
+              <h1 class="font-semibold text-[1rem]">Consultant</h1>
+              <p class="font-semibold text-[.8rem] text-gray-600">
+                Sales Revenue
+              </p>
+            </div>
+            <img src="/img/star.png" alt="Star" class="w-[1.8rem] h-[1.8rem]" />
+          </div>
+          <ul class="m-2">
+            <li class="flex flex justify-between items-center">
+              <p class="font-semibold text-[.8rem] text-gray-600">2.252.222</p>
+              <p class="font-semibold text-[.8rem] text-gray-600">Reda</p>
+            </li>
+            <li class="flex flex justify-between items-center">
+              <p class="font-semibold text-[.8rem] text-gray-600">2.252.222</p>
+              <p class="font-semibold text-[.8rem] text-gray-600">Karima</p>
+            </li>
+            <li class="flex flex justify-between items-center">
+              <p class="font-semibold text-[.8rem] text-gray-600">2.000.222</p>
+              <p class="font-semibold text-[.8rem] text-gray-600">Hassan</p>
+            </li>
+            <li class="flex flex justify-between items-center">
+              <p class="font-semibold text-[.8rem] text-gray-600">2.780.00</p>
+              <p class="font-semibold text-[.8rem] text-gray-600">Mohamed</p>
+            </li>
+            <li class="flex flex justify-between items-center">
+              <p class="font-semibold text-[.8rem] text-gray-600">5.050.5</p>
+              <p class="font-semibold text-[.8rem] text-gray-600">Salma</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Box 4 -->
+        <div
+          class="lg:col-span-2 col-span-3 box flex flex-col justify-center md:px-8 md:px-8"
+        >
+          <h1 class="font-semibold text-[1.4rem] Text-gray-700">
+            Total Earning by months
+          </h1>
+          <div>
+            <div class="lg:h-[10rem] h-[16rem]">
+              <canvas id="line-chart" class="w-[100%]"></canvas>
+            </div>
+            <div class="flex lg:gap-6 gap-24">
+              <div>
+                <div class="flex gap-1">
+                  <img
+                    src="./img/increase.png"
+                    alt="increaseIcon"
+                    class="w-[2rem] h-[2rem]"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-[1rem]">Highest</h3>
+                  </div>
+                </div>
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  monthly Revenue
+                </p>
+                <h3 class="font-semibold text-[1rem]">20,606,000,550</h3>
+              </div>
+              <div>
+                <div class="flex gap-1">
+                  <img
+                    src="./img/average.png"
+                    alt="increaseIcon"
+                    class="w-[2rem] h-[2rem]"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-[1rem]">Average</h3>
+                  </div>
+                </div>
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  monthly Revenue
+                </p>
+                <h3 class="font-semibold text-[1rem]">1,400,000,550</h3>
+              </div>
+              <div>
+                <div class="flex gap-1">
+                  <img
+                    src="./img/decrease.png"
+                    alt="increaseIcon"
+                    class="w-[2rem] h-[2rem]"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-[1rem]">Lowest</h3>
+                  </div>
+                </div>
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  monthly Revenue
+                </p>
+                <h3 class="font-semibold text-[1rem]">6,000,550</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Box 5 -->
+        <div
+          class="col-span-1 box flex flex-col py-12 justify-around items-center"
+        >
+          <div class="flex gap-2 justify-center items-center">
+            <div>
+              <canvas id="GreenDoughnut" class="w-[5rem]"></canvas>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[1rem] text-gray-600">
+                Total Paid
+              </h3>
+              <h3 class="font-semibold text-[1rem]">1,198</h3>
+              <p class="font-semibold text-[.8rem] text-gray-600">Call</p>
+            </div>
+          </div>
+          <hr class="border-1 border-gray-400 w-full" />
+          <div class="flex gap-2 justify-center items-center">
+            <div>
+              <canvas id="RedDoughnut" class="w-[5rem]"></canvas>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[1rem] text-gray-600">
+                Total Unpaid
+              </h3>
+              <h3 class="font-semibold text-[1rem]">398</h3>
+              <p class="font-semibold text-[.8rem] text-gray-600">Call</p>
+            </div>
+          </div>
+        </div>
+        <!-- Box 6-->
+        <div
+          class="col-span-1 box bg-blue-300 px-4 text-white flex flex-col justify-center"
+        >
+          <div>
+            <h3 class="text-white">Monthly</h3>
+            <p class="bg-blue-300">Season</p>
+            <hr class="my-4" />
+          </div>
+          <ul class="grid grid-cols-4 gap-4">
+            <li>Jna</li>
+            <li>Feb</li>
+            <li>Mar</li>
+            <li>Apr</li>
+            <li>May</li>
+            <li>Jun</li>
+            <li>Jul</li>
+            <li>Aug</li>
+            <li>Sep</li>
+            <li>Oct</li>
+            <li>Nov</li>
+            <li>Dec</li>
+          </ul>
+        </div>
+        <!-- Box 7 -->
+        <div class="col-span-1 box px-4 flex flex-col justify-center">
+          <h1 class="font-semibold text-[1.4rem] Text-gray-700">
+            Earned Courses
+          </h1>
+          <div class="flex items-center gap-4">
+            <p class="font-semibold text-[1.4rem] text-indigo-900">3.475</p>
+            <p class="font-semibold text-[.8rem] text-gray-600">courses</p>
+          </div>
+          <div>
+            <p class="font-semibold text-[1rem] text-gray-600">Average</p>
+            <p class="font-semibold text-[1.4rem] text-yellow-400">2.23 ~</p>
+          </div>
+          <div>
+            <canvas id="CoursesChart" class="w-[100%]"></canvas>
+          </div>
+        </div>
+        <!-- Box 8 -->
+        <div
+          class="col-span-3 box px-4 flex flex-col gap-1 box px-8 justify-center"
+        >
+          <h1 class="font-semibold text-[1.4rem] Text-gray-700 mb-4">
+            Advertising Channel
+          </h1>
+          <div class="flex gap-10">
+            <div class="h-[16rem]">
+              <canvas id="pie_chart" class="w-[100%]"></canvas>
+            </div>
+            <ul
+              class="grid grid-cols-2 grid-rows-3 gap-x-4 text-gray-600 justify-center items-center px-4"
+            >
+              <li>
+                <h1 class="font-normal text-[1.4rem]">Facebook</h1>
+                <p class="font-bold text-[1rem] mb-4">24.884</p>
+              </li>
+              <li>
+                <h1 class="font-normal text-[1.4rem]">Youtube</h1>
+                <p class="font-bold text-[1rem] mb-4">124.444</p>
+              </li>
+              <li>
+                <h1 class="font-normal text-[1.4rem]">WhatsApp</h1>
+                <p class="font-bold text-[1rem] mb-4">124.444</p>
+              </li>
+              <li>
+                <h1 class="font-normal text-[1.4rem]">Google</h1>
+                <p class="font-bold text-[1rem] mb-4">124.444</p>
+              </li>
+              <li>
+                <h1 class="font-normal text-[1.4rem]">WebSite</h1>
+                <p class="font-bold text-[1rem] mb-4">124.444</p>
+              </li>
+              <li>
+                <h1 class="font-normal text-[1.4rem]">Television</h1>
+                <p class="font-bold text-[1rem] mb-4">124.444</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Box 9 -->
+        <div class="col-span-2 flex flex-col gap-4 box px-8 justify-center">
+          <!-- row 1 -->
+          <h1 class="font-semibold text-[1.4rem] Text-gray-700 mb-4">
+            Training Level's Fees by Sales
+          </h1>
+          <div>
+            <div class="h-[10rem]">
+              <canvas id="horiz_line" class="w-[100%]"></canvas>
+            </div>
+          </div>
+          <!-- row 2 -->
+          <div>
+            <div class="h-[10rem]">
+              <canvas id="line_circ" class="w-[100%]"></canvas>
+            </div>
+          </div>
+          <p class="text-red-400">Enrolled Courses on Training Levels</p>
+        </div>
+        <!-- Box 10 -->
+        <div class="flex flex-col col-span-1 gap-2">
+          <div class="box">
+            <div class="h-[14rem]">
+              <canvas id="areaCode" class="w-[100%]"> </canvas>
+            </div>
+          </div>
+          <div class="box">
+            <div class="h-[14rem]">
+              <canvas id="doughnut_chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Box 11 -->
+        <div class="col-span-4 flex justify-between gap-2">
+          <div class="flex gap-4 box items-center justify-center w-full">
+            <div class="basis-[69%] h-[16rem]">
+              <canvas id="Bubble_Chart"></canvas>
+            </div>
+            <div class="basis-[30%] h-[100%] flex flex-col gap-4">
+              <div>
+                <p class="font-semibold text-[.8rem]">Average</p>
+                <h1 class="font-semibold text-[1rem]">Paid Calls Duration</h1>
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  by Months
+                </p>
+              </div>
+              <div class="bg-indigo-900 rounded-sm">
+                <h1 class="font-semibold text-[1rem] p-2 text-white">
+                  04:36 mm:ss
+                </h1>
+              </div>
+              <div class="flex justify-between">
+                <div class="flex flex-col justify-center items-center">
+                  <img
+                    src="./img/stopwatch.png"
+                    alt="watch"
+                    class="w-[2rem] h-[2rem]"
+                  />
+                  <div class="text-center">
+                    <h1 class="font-semibold text-[1rem]">Minimum</h1>
+                    <p class="font-semibold text-[.8rem] text-gray-600">
+                      Call Duration
+                    </p>
+                    <h1 class="font-semibold text-[1rem]">02:00</h1>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                  <img
+                    src="./img/stopwatch.png"
+                    alt="watch"
+                    class="w-[2rem] h-[2rem]"
+                  />
+                  <div class="text-center">
+                    <h1 class="font-semibold text-[1rem]">Maximum</h1>
+                    <p class="font-semibold text-[.8rem] text-gray-600">
+                      Call Duration
+                    </p>
+                    <h1 class="font-semibold text-[1rem]">05:55</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-3 box flex flex-col gap-4 justify-center px-4">
+            <div class="flex flex justify-between items-start mb-4">
+              <div>
+                <p class="font-semibold text-[.8rem] text-gray-600">Calls</p>
+                <h1 class="font-semibold text-[1rem]">Consultant</h1>
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  Sales Revenue
+                </p>
+              </div>
+              <img
+                src="/img/star.png"
+                alt="Star"
+                class="w-[1.8rem] h-[1.8rem]"
+              />
+            </div>
+            <ul class="m-2">
+              <li class="flex flex justify-between items-center">
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  2.252.222
+                </p>
+                <p class="font-semibold text-[.8rem] text-gray-600">Reda</p>
+              </li>
+              <li class="flex flex justify-between items-center">
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  2.252.222
+                </p>
+                <p class="font-semibold text-[.8rem] text-gray-600">Karima</p>
+              </li>
+              <li class="flex flex justify-between items-center">
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  2.000.222
+                </p>
+                <p class="font-semibold text-[.8rem] text-gray-600">Hassan</p>
+              </li>
+              <li class="flex flex justify-between items-center">
+                <p class="font-semibold text-[.8rem] text-gray-600">2.780.00</p>
+                <p class="font-semibold text-[.8rem] text-gray-600">Mohamed</p>
+              </li>
+              <li class="flex flex justify-between items-center">
+                <p class="font-semibold text-[.8rem] text-gray-600">5.050.5</p>
+                <p class="font-semibold text-[.8rem] text-gray-600">Salma</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Box 12 -->
+        <div class="col-span-3 flex flex-col gap-4 box px-4">
+          <div class="flex gap-1 justify-between items-center">
+            <div>
+              <h1 class="font-semibold text-[1rem]">Consultant</h1>
+              <p class="font-semibold text-[.8rem] text-gray-600">
+                by Total Sales
+              </p>
+            </div>
+            <div class="flex gap-1 justify-between items-center">
+              <img
+                src="./img/medal.png"
+                alt="medal"
+                class="w-[3rem] h-[3rem ]"
+              />
+              <div class="text-center">
+                <h1 class="font-semibold text-[1.4rem]">Adam</h1>
+                <h1 class="font-semibold text-[1.4rem]">379.0M</h1>
+                <p class="font-semibold text-[.8rem] text-gray-600">
+                  Top Selling Consultant
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="h-[12rem]">
+            <canvas id="Bar_Chart" class="w-full m-auto"></canvas>
+          </div>
+        </div>
+        <!-- Box 13 -->
+        <div class="col-span-3 box">
+          <div class="h-[12rem] w-full">
+            <canvas id="threeLine_Chart" class="w-full m-auto"></canvas>
+          </div>
+        </div>
+
+        <!--Box 14 -->
+        <div
+          class="col-span-1 box bg-blue-300 px-4 text-white flex flex-col justify-center"
+        >
+          <div>
+            <h3 class="text-white">Monthly</h3>
+            <p class="bg-blue-300">Season</p>
+            <hr class="my-4" />
+          </div>
+          <div>
+            <h3 class="text-white">Mohammed</h3>
+            <h3 class="text-white">Reda</h3>
+            <h3 class="text-white">Anass</h3>
+            <h3 class="text-white">Ahmad</h3>
+          </div>
+        </div>
+        <!--Box 15 -->
+        <div class="col-span-3 flex flex-col gap-4 box px-4">
+          <div class="flex gap-1 justify-between items-center">
+            <div>
+              <h1 class="font-semibold text-[1rem]">Advertisements</h1>
+              <p class="font-semibold text-[.8rem] text-gray-600">
+                by Total Sales
+              </p>
+            </div>
+
+            <div class="text-center bg-violet-800 p-1 flex gap-2 items-center justify-center ">
+              <h1
+                class="font-semibold text-[1rem] border-r-[1px] border-white p-2 text-white"
+              >
+                5
+              </h1>
+              <h1 class="font-semibold text-[1rem] text-orange-500 ">Total Advertisements</h1>
+            </div>
+          </div>
+          <div class="h-[12rem]">
+            <canvas id="Ads_Chart" class="w-full m-auto"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

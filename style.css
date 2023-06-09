@@ -1,0 +1,8 @@
+/** @format */
+
+.box {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 5px 5px 10px #cecece;
+  padding: 0.8rem 0.4rem;
+}
